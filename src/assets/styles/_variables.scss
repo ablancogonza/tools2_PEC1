@@ -1,0 +1,17 @@
+@use "sass:color";
+
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+$font-family-serif: "Georgia", "Times New Roman", serif;
+
+$suelo: #c25f08;
+$site-bg: color.scale($suelo, $lightness: 80%);
+$color-cabecera: color.scale($suelo, $lightness: 50%);
+$color-seccion: color.scale($suelo, $lightness: 90%);
+$color-titulo: black;
+$color-texto: #222;
+$mqMinWidth: 1024px;
+
+$uoc-bg: #d86908;
+$uoc-corporate: #847264;

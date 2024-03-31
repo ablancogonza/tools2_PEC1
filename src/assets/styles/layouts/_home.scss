@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-family-sans-serif;
+  font-size: 16px;
+  line-height: 1.4rem;
+  background-color: $site-bg;
+}
+
+img {
+  width: 100%;
+}
+
+article {
+  margin-top: 2S0px;
+  padding: 0.5rem;
+
+  @media (min-width: $mqMinWidth) {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.section {
+  padding-top: 2rem;
+  float: none;
+
+  .section__titulo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    background-color: $color-seccion;
+    padding: 1.5rem;
+  }
+}
+
+.presentacion {
+  margin-top: 2rem;
+
+  .presentacion__titulo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: $color-titulo;
+    margin-bottom: 0.5rem;
+  }
+
+  .presentacion__imagen {
+    margin: 0 0.5rem;
+  }
+
+  .presentacion__texto {
+    color: $color-texto;
+  }
+}
+
+.contenido {
+  margin-top: 2rem;
+
+  .contenido__titulo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: $color-titulo;
+    margin-bottom: 0.5rem;
+  }
+
+  .contenido__contenedor {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $suelo;
+  }
+
+  .contenido__contenedor--inverso {
+    flex-direction: row-reverse;
+  }
+
+  .contenido__imagen {
+    margin: 0 0.5rem;
+    flex: 1;
+  }
+
+  .contenido__texto {
+    color: $color-texto;
+    flex: 1;
+  }
+
+  @media (max-width: 768px) {
+    .contenido__contenedor {
+      flex-direction: column;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: $color-cabecera;
+
+  .header__titulo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+  }
+  
+}
+
+.navbar {
+  .navbar__list {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style-type: none;
+
+    li a {
+      background-color: $color-seccion;
+      padding: 0.5rem;
+      text-decoration: none;
+      border-radius: 0.5rem;
+    }
+
+    li a:hover {
+      background-color: $suelo;
+      color: white;
+    }
+  }
+
+  .navbar__icon {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    
+  }
+}

@@ -10,11 +10,11 @@
  * Write any other JavaScript below
  */
 
-+( function() {
-  const university = "UOC";
-  console.log(`Hello, ${university}!`);
-} )();
-
-function swapMenu() {
-  alert("xfgdfg");
-}
+window.addEventListener("click", function swapMenu() {
+  const navbar = this.document.getElementById("navbar__list");
+  if (navbar.className === "navbar__list") {
+    navbar.className += " navbar__list--visible";
+  } else {
+    navbar.className = "navbar__list";
+  }
+});

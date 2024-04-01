@@ -17,7 +17,7 @@ img {
 }
 
 article {
-  margin-top: 2S0px;
+  margin-top: 20px;
   padding: 0.5rem;
 
   @media (min-width: $mqMinWidth) {
@@ -89,7 +89,7 @@ article {
     flex: 1;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $mqLayout) {
     .contenido__contenedor {
       flex-direction: column;
     }
@@ -97,49 +97,87 @@ article {
 }
 
 .header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   position: sticky;
   top: 0;
-  width: 100%;
   z-index: 1;
+  width: 100%;
   background-color: $color-cabecera;
+
+  .header__container {
+    max-width: 960px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
 
   .header__titulo {
     font-size: 2rem;
     font-weight: 800;
     color: white;
   }
-  
+
 }
 
 .navbar {
+  display: flex;
+  flex-direction: row;
+  min-height: 3.3rem;
+
   .navbar__list {
     display: flex;
     flex-direction: row;
     gap: 1rem;
     list-style-type: none;
-
+    
     li a {
       background-color: $color-seccion;
       padding: 0.5rem;
       text-decoration: none;
       border-radius: 0.5rem;
+
+      @media (max-width: $mqMenu) {
+        display: block;
+      }
     }
 
     li a:hover {
       background-color: $suelo;
       color: white;
     }
+
+    @media (max-width: $mqMenu) {
+      display: none;
+      flex-direction: column;
+      gap: 0.2rem;
+      position: relative;
+      top: 1rem;
+      left: 1.5rem;
+      padding: 0.5rem;
+      color: white;
+    }
+    
+  }
+
+  .navbar__list--visible {
+    display: flex;
   }
 
   .navbar__icon {
     display: none;
+    color: white;
+    margin-top: 1rem;
+
+    @media (max-width: $mqMenu) {
+      display: block;
+    }
   }
 
-  @media (max-width: 768px) {
-    
-  }
+}
+
+.footer {
+  max-width: $mqMinWidth;
+  margin: 0 auto;
 }

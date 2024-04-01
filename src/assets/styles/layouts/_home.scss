@@ -15,11 +15,16 @@ img {
 }
 
 a {
-  color: white;
+  color: black;
 }
 
 a:visited {
-  color: white;
+  color: black;
+}
+
+button {
+  border: none;
+  background-color: transparent;
 }
 
 article {
@@ -124,7 +129,7 @@ article {
   .header__titulo {
     font-size: 2rem;
     font-weight: 800;
-    color: white;
+    color: black;
   }
 
 }
@@ -145,7 +150,7 @@ article {
 
   .recurso__url {
     white-space: nowrap;
-    overflow: hidden;   
+    overflow: hidden;  
   }
 }
 
@@ -187,7 +192,7 @@ article {
       gap: 0.2rem;
       position: relative;
       top: 1rem;
-      left: 1.5rem;
+      left: 4rem;
       padding: 0.5rem;
       color: white;
     }
@@ -200,7 +205,8 @@ article {
 
   .navbar__icon {
     display: none;
-    color: white;
+    color: black;
+    max-height: 1rem;
     margin-top: 1rem;
 
     @media (max-width: $mqMenu) {
@@ -212,8 +218,8 @@ article {
 
 .footer {
   width: 100%;
-  background-color: $suelo;
-  color: white;
+  background-color: $color-cabecera;
+  color: black;
   padding: 1rem;
   
   .footer__autor {
